@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<BorderPane fx:id="panecombat" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vues.controller.FenetreCombat">
+
+
+    <ImageView fx:id="joueur" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="ennemi" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+
+
+    <bottom>
+        <HBox styleClass="interface">
+            <Button fx:id="attaque1" textFill="green" onAction="#effectuerAttaque1" />
+            <Button fx:id="attaque2" textFill="green" onAction="#effectuerAttaque2"/>
+            <Button fx:id="attaque3" textFill="green" onAction="#effectuerAttaque3"/>
+            <Button fx:id="attaque4" textFill="green" onAction="#effectuerAttaque4"/>
+            <HBox>
+                <HBox styleClass="combat">
+                    <Text styleClass="combat" fx:id="nomJoueur" text=" "/>
+                    <Text styleClass="combat" fx:id="pvJoueur"/>
+                    <ImageView fx:id="etatJoueur" fitHeight="15" fitWidth="25"/>
+                </HBox>
+                <HBox styleClass="combat">
+                    <Text styleClass="combat" fx:id="nomEnnemi" text=" "/>
+                    <Text styleClass="combat" fx:id="pvEnnemi"/>
+                    <ImageView fx:id="etatEnnemi" fitHeight="15" fitWidth="25"/>
+                </HBox>
+            </HBox>
+        </HBox>
+    </bottom>
+
+
+
+    <stylesheets>
+        <URL value="@../css/Combat.css" />
+    </stylesheets>
+
+
+
+</BorderPane>
